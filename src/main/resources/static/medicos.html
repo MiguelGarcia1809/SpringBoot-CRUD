@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Medicos</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Clinica</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="medicos.html">Medicos
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>             
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="container">
+          <h1 class="my-3">Lista de Medicos</h1>
+
+          <button type="button" class="btn btn-success mb-3" id="btn-agregar" data-bs-dismiss="modal">Agregar Medico</button>
+
+        </div>
+
+        <table class="table table-hover text-center align-middle">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Id</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Especialidad</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="table-content">
+          </tbody>
+        </table>
+        
+      </div>
+      
+      <div class="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+            </div>
+            <div class="modal-body">
+              <p>Nombre</p><input type="text" class="form-control" id="nombreTxt" style="margin-top:-1rem; margin-bottom:1rem">
+              <p class="mt-1">Apellido</p><input type="text" class="form-control" id="apellidoTxt" style="margin-top:-1rem; margin-bottom:1rem">
+              <p>Especialidad</p><input type="text" class="form-control" id="especialidadTxt" style="margin-top:-1rem; margin-bottom:1rem">
+              <p>Email</p><input type="text" class="form-control" id="emailTxt" style="margin-top:-1rem; margin-bottom:1rem">
+              <p>Direccion</p><input type="text" class="form-control" id="direccionTxt" style="margin-top:-1rem; margin-bottom:1rem">
+              <p>Telefono</p> <input type="text" class="form-control" id="telefonoTxt" style="margin-top:-1rem; margin-bottom:1rem">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="close-modal" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-success" id="save-modal" data-bs-dismiss="modal">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="module" src="/js/medico.js"></script>
+      <script src="/js/modal.js"></script>
+      <!-- <script src="js/agregarMedico.js"></script>
+      <script src="js/actualizarMedico.js"></script> -->
+</body>
+</html>
