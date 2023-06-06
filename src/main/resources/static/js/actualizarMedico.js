@@ -7,7 +7,7 @@ async function actualizarApi(id,datos) {
         },
         body : JSON.stringify(datos)
     });
-
+    location.reload();
 }
 
 async function actualizarMedico(id){
@@ -20,8 +20,6 @@ async function actualizarMedico(id){
     datos.telefono = document.getElementById("telefonoTxt").value;
 
     actualizarApi(id,datos);
-
-    location.reload();
 }
 
 export {actualizarMedico}
